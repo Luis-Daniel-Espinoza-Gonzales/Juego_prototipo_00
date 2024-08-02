@@ -24,7 +24,7 @@ if (horizontal != 0 || vertical != 0){
 	}
 }
 
-if(cant_vida = 0){
+if(cant_vida == 0){
 	if(!instance_exists(obj_pausa)){
 		instance_create_layer(x, y, "instances", obj_pausa);
 		show_debug_message("El personaje ha muerto. Juego pausado");
