@@ -24,13 +24,27 @@ if (horizontal != 0 || vertical != 0){
 	}
 }
 
+if(cant_vida = 0){
+	if(!instance_exists(obj_pausa)){
+		instance_create_layer(x, y, "instances", obj_pausa);
+		show_debug_message("El personaje ha muerto. Juego pausado");
+		global.pausa = true;
+		
+		instance_deactivate_object(obj_hostil);
+		
+		
+	}
+}
+
+var target_x = x + lengthdir_x(64, new_dir);
+var target_y = y + lengthdir_y(65, new_dir);
 //comprobar si hay colision
-if(place_meeting(x, y, obj_hostil)){
+if(collision_line(x, y, target_x, target_y, obj_hostil, true, false)){
 	tiempo_dano += 1;
 	
 	if(tiempo_dano >= intervalo_dano){
-		cant_vida -= 1;
-		show_debug_message("El personaje ha recibido 1 punto de daño.");
+		obj_hostil.cant_vida -= 1;
+		show_debug_message("El hostil ha recibido 1 punto de daño.");
 		
 		tiempo_dano = 0;
 	}
