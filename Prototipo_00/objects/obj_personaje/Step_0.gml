@@ -39,16 +39,22 @@ if(cant_vida == 0){
 var target_x = x + lengthdir_x(64, new_dir);
 var target_y = y + lengthdir_y(65, new_dir);
 //comprobar si hay colision
-if(collision_line(x, y, target_x, target_y, obj_hostil, true, false)){
-	tiempo_dano += 1;
+var obj_collision = instance_place(x + 64, y + 65, obj_hostil);
+
+if(obj_collision != noone){
+
+	if(collision_line(x, y, obj_collision.x, obj_collision.y, obj_hostil, true, false)){
+		tiempo_dano += 1;
 	
-	if(tiempo_dano >= intervalo_dano){
-		obj_hostil.cant_vida -= 1;
-		show_debug_message("El hostil ha recibido 1 punto de daño.");
+		if(tiempo_dano >= intervalo_dano){
+			obj_collision.cant_vida -= 1;
+			show_debug_message("El hostil ha recibido 1 punto de daño.");
 		
-		tiempo_dano = 0;
+			tiempo_dano = 0;
+		}
 	}
-}
-else{
-		tiempo_dano = 0;
+	else{
+			tiempo_dano = 0;
+	}
+
 }

@@ -43,6 +43,7 @@
     {"id":{"name":"obj_pared","path":"objects/obj_pared/obj_pared.yy",},},
     {"id":{"name":"obj_pausa","path":"objects/obj_pausa/obj_pausa.yy",},},
     {"id":{"name":"obj_personaje","path":"objects/obj_personaje/obj_personaje.yy",},},
+    {"id":{"name":"obj_spawn","path":"objects/obj_spawn/obj_spawn.yy",},},
     {"id":{"name":"obj_vida","path":"objects/obj_vida/obj_vida.yy",},},
     {"id":{"name":"Object5","path":"objects/Object5/Object5.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
