@@ -31,15 +31,14 @@ if(cant_vida == 0){
 		global.pausa = true;
 		
 		instance_deactivate_object(obj_hostil);
-		
-		
+		instance_deactivate_object(obj_spawn);
 	}
 }
 
-var target_x = x + lengthdir_x(64, new_dir);
-var target_y = y + lengthdir_y(65, new_dir);
+var target_x = x + lengthdir_x(1, new_dir);
+var target_y = y + lengthdir_y(1, new_dir);
 //comprobar si hay colision
-var obj_collision = instance_place(x + 64, y + 65, obj_hostil);
+var obj_collision = instance_place(1, 1, obj_hostil);
 
 if(obj_collision != noone){
 
