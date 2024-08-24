@@ -38,7 +38,7 @@ if(cant_vida == 0){
 var target_x = x + lengthdir_x(1, new_dir);
 var target_y = y + lengthdir_y(1, new_dir);
 //comprobar si hay colision
-var obj_collision = instance_place(1, 1, obj_hostil);
+var obj_collision = instance_place(target_x, target_y, obj_hostil);
 
 if(obj_collision != noone){
 
