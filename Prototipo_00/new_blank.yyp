@@ -27,6 +27,7 @@
     {"$GMFolder":"","%Name":"Sprites","folderPath":"folders/Sprites.yy","name":"Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Escenario","folderPath":"folders/Sprites/Escenario.yy","name":"Escenario","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"grupo1","folderPath":"folders/Sprites/grupo1.yy","name":"grupo1","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Lanzador","folderPath":"folders/Sprites/Lanzador.yy","name":"Lanzador","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Hostil","folderPath":"folders/Sprites/Hostil.yy","name":"Hostil","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Personaje","folderPath":"folders/Sprites/Personaje.yy","name":"Personaje","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
@@ -40,6 +41,7 @@
   "resources":[
     {"id":{"name":"obj_controlador","path":"objects/obj_controlador/obj_controlador.yy",},},
     {"id":{"name":"obj_hostil","path":"objects/obj_hostil/obj_hostil.yy",},},
+    {"id":{"name":"obj_lanzador","path":"objects/obj_lanzador/obj_lanzador.yy",},},
     {"id":{"name":"obj_pared","path":"objects/obj_pared/obj_pared.yy",},},
     {"id":{"name":"obj_pausa","path":"objects/obj_pausa/obj_pausa.yy",},},
     {"id":{"name":"obj_personaje","path":"objects/obj_personaje/obj_personaje.yy",},},
@@ -52,6 +54,7 @@
     {"id":{"name":"Sprite3","path":"sprites/Sprite3/Sprite3.yy",},},
     {"id":{"name":"Sprite4","path":"sprites/Sprite4/Sprite4.yy",},},
     {"id":{"name":"Sprite6","path":"sprites/Sprite6/Sprite6.yy",},},
+    {"id":{"name":"Sprite7","path":"sprites/Sprite7/Sprite7.yy",},},
     {"id":{"name":"vida_sprite","path":"sprites/vida_sprite/vida_sprite.yy",},},
     {"id":{"name":"TileSet1","path":"tilesets/TileSet1/TileSet1.yy",},},
   ],
