@@ -27,15 +27,15 @@
     {"$GMFolder":"","%Name":"Sprites","folderPath":"folders/Sprites.yy","name":"Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Escenario","folderPath":"folders/Sprites/Escenario.yy","name":"Escenario","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"grupo1","folderPath":"folders/Sprites/grupo1.yy","name":"grupo1","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Lanzador","folderPath":"folders/Sprites/Lanzador.yy","name":"Lanzador","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Hostil","folderPath":"folders/Sprites/Hostil.yy","name":"Hostil","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Lanzador","folderPath":"folders/Sprites/Lanzador.yy","name":"Lanzador","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Personaje","folderPath":"folders/Sprites/Personaje.yy","name":"Personaje","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "IncludedFiles":[],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.6.1.160",
+    "IDEVersion":"2024.6.2.162",
   },
   "name":"new_blank",
   "resources":[

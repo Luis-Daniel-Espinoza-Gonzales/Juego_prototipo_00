@@ -39,7 +39,7 @@ var target_x = x + lengthdir_x(1, new_dir);
 var target_y = y + lengthdir_y(1, new_dir);
 //comprobar si hay colision
 var obj_collision = instance_place(target_x, target_y, obj_hostil);
-
+var obj_collision_01 = instance_place(target_x, target_y, obj_lanzador);
 if(obj_collision != noone){
 
 	if(collision_line(x, y, obj_collision.x, obj_collision.y, obj_hostil, true, false)){
@@ -55,5 +55,20 @@ if(obj_collision != noone){
 	else{
 			tiempo_dano = 0;
 	}
-
+}
+if(obj_collision_01 != noone){
+	if(collision_line(x, y, obj_collision_01.x, obj_collision_01.y, obj_lanzador, true, false)){
+		tiempo_dano += 1;
+	
+		if(tiempo_dano >= intervalo_dano){
+			obj_collision_01.cant_vida -= 1;
+			show_debug_message("El lanzador ha recibido 1 punto de daño.");
+		
+			tiempo_dano = 0;
+		}
+	}
+	else{
+			tiempo_dano = 0;
+	
+	}
 }
