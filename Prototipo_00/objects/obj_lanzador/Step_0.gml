@@ -81,6 +81,28 @@ if(instance_exists(obj_personaje)){
             }
         }
 		
+		if (place_meeting(x, y, obj_lanzador)) {
+            var desplazado = false;
+            // Intentar mover el `obj_hostil` para evitar superposición
+            for (var i = 0; i < 4; i++) {
+                var dir_ajuste = i * 90;
+                var x_ajustado = x + lengthdir_x(5, dir_ajuste);
+                var y_ajustado = y + lengthdir_y(5, dir_ajuste);
+                
+                if (!place_meeting(x_ajustado, y_ajustado, obj_pared) && !place_meeting(x_ajustado, y_ajustado, obj_lanzador)) {
+                    x = x_ajustado;
+                    y = y_ajustado;
+                    desplazado = true;
+                    break;
+                }
+            }
+            // Si no se pudo ajustar, mover hacia atrás
+            if (!desplazado) {
+                x -= lengthdir_x(velocidad, direccion);
+                y -= lengthdir_y(velocidad, direccion);
+            }
+        }
+		
 		if (place_meeting(x, y, obj_personaje)) {
             var corregido_x = x - lengthdir_x(velocidad, direccion);
             var corregido_y = y - lengthdir_y(velocidad, direccion);
@@ -119,6 +141,28 @@ if(instance_exists(obj_personaje)){
 		var direccion_alejamiento = point_direction(x, y, x_personaje, y_personaje);
 		var nuevo_x = x + lengthdir_x(-velocidad, direccion_alejamiento);
 		var nuevo_y = y + lengthdir_y(-velocidad, direccion_alejamiento);
+		
+		if (place_meeting(x, y, obj_lanzador)) {
+            var desplazado = false;
+            // Intentar mover el `obj_hostil` para evitar superposición
+            for (var i = 0; i < 4; i++) {
+                var dir_ajuste = i * 90;
+                var x_ajustado = x + lengthdir_x(5, dir_ajuste);
+                var y_ajustado = y + lengthdir_y(5, dir_ajuste);
+                
+                if (!place_meeting(x_ajustado, y_ajustado, obj_pared) && !place_meeting(x_ajustado, y_ajustado, obj_lanzador)) {
+                    x = x_ajustado;
+                    y = y_ajustado;
+                    desplazado = true;
+                    break;
+                }
+            }
+            // Si no se pudo ajustar, mover hacia atrás
+            if (!desplazado) {
+                x -= lengthdir_x(velocidad, direccion);
+                y -= lengthdir_y(velocidad, direccion);
+            }
+        }
     
 		if (!place_meeting(nuevo_x, nuevo_y, obj_pared)) {
 		    x = nuevo_x;
@@ -141,6 +185,29 @@ if(instance_exists(obj_personaje)){
 			
 	}
 	if(distancia > 350 && distancia < 400){	
+		
+		if (place_meeting(x, y, obj_lanzador)) {
+            var desplazado = false;
+            // Intentar mover el `obj_hostil` para evitar superposición
+            for (var i = 0; i < 4; i++) {
+                var dir_ajuste = i * 90;
+                var x_ajustado = x + lengthdir_x(5, dir_ajuste);
+                var y_ajustado = y + lengthdir_y(5, dir_ajuste);
+                
+                if (!place_meeting(x_ajustado, y_ajustado, obj_pared) && !place_meeting(x_ajustado, y_ajustado, obj_lanzador)) {
+                    x = x_ajustado;
+                    y = y_ajustado;
+                    desplazado = true;
+                    break;
+                }
+            }
+            // Si no se pudo ajustar, mover hacia atrás
+            if (!desplazado) {
+                x -= lengthdir_x(velocidad, direccion);
+                y -= lengthdir_y(velocidad, direccion);
+            }
+        }
+		
 		show_debug_message("disparando a personaje");
 			
 		tiempo_dano += 1;
@@ -211,6 +278,28 @@ if(instance_exists(obj_personaje)){
                 var y_ajustado = y + lengthdir_y(5, dir_ajuste);
                 
                 if (!place_meeting(x_ajustado, y_ajustado, obj_pared) && !place_meeting(x_ajustado, y_ajustado, obj_hostil)) {
+                    x = x_ajustado;
+                    y = y_ajustado;
+                    desplazado = true;
+                    break;
+                }
+            }
+            // Si no se pudo ajustar, mover hacia atrás
+            if (!desplazado) {
+                x -= lengthdir_x(velocidad, direccion);
+                y -= lengthdir_y(velocidad, direccion);
+            }
+        }
+		
+		if (place_meeting(x, y, obj_lanzador)) {
+            var desplazado = false;
+            // Intentar mover el `obj_hostil` para evitar superposición
+            for (var i = 0; i < 4; i++) {
+                var dir_ajuste = i * 90;
+                var x_ajustado = x + lengthdir_x(5, dir_ajuste);
+                var y_ajustado = y + lengthdir_y(5, dir_ajuste);
+                
+                if (!place_meeting(x_ajustado, y_ajustado, obj_pared) && !place_meeting(x_ajustado, y_ajustado, obj_lanzador)) {
                     x = x_ajustado;
                     y = y_ajustado;
                     desplazado = true;

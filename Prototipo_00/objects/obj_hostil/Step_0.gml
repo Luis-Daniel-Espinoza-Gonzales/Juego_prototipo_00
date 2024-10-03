@@ -81,6 +81,28 @@ if(instance_exists(obj_personaje)){
             }
         }
 		
+		if (place_meeting(x, y, obj_lanzador)) {
+            var desplazado = false;
+            // Intentar mover el `obj_hostil` para evitar superposición
+            for (var i = 0; i < 4; i++) {
+                var dir_ajuste = i * 90;
+                var x_ajustado = x + lengthdir_x(5, dir_ajuste);
+                var y_ajustado = y + lengthdir_y(5, dir_ajuste);
+                
+                if (!place_meeting(x_ajustado, y_ajustado, obj_pared) && !place_meeting(x_ajustado, y_ajustado, obj_lanzador)) {
+                    x = x_ajustado;
+                    y = y_ajustado;
+                    desplazado = true;
+                    break;
+                }
+            }
+            // Si no se pudo ajustar, mover hacia atrás
+            if (!desplazado) {
+                x -= lengthdir_x(velocidad, direccion);
+                y -= lengthdir_y(velocidad, direccion);
+            }
+        }
+		
 		if (place_meeting(x, y, obj_personaje)) {
             var corregido_x = x - lengthdir_x(velocidad, direccion);
             var corregido_y = y - lengthdir_y(velocidad, direccion);

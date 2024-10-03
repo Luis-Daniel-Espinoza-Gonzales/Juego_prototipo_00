@@ -31,7 +31,12 @@ if(cant_vida <= 0){
 		global.pausa = true;
 		
 		instance_deactivate_object(obj_hostil);
-		instance_deactivate_object(obj_spawn);
+		instance_deactivate_object(obj_spawn_hostil);
+		
+		instance_deactivate_object(obj_lanzador);
+		instance_deactivate_object(obj_spawn_lanzador);
+		
+		instance_deactivate_object(obj_proyectil);
 	}
 }
 
