@@ -1,9 +1,9 @@
 var count = instance_number(obj_hostil);
 
 if(hostiles_generado < max_hostiles && hostiles_room < max_hostiles_room){
-	if(count == 2){
+	if(count == 3){
 
-		show_debug_message("hay 2 hostiles");
+		
 
 	}
 	else{

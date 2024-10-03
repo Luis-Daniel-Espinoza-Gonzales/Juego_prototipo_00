@@ -6,4 +6,6 @@ cant_vida = vida_maxima;
 game_set_speed(60, 30); // 60 FPS Y 30 UPS globalmente
 tiempo_dano = 0;
 intervalo_dano = 2 * 30;
+intervalo_dano_proyectil = 4 * 30;
+
 

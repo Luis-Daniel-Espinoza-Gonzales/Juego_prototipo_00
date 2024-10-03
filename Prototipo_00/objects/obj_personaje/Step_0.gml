@@ -40,6 +40,7 @@ var target_y = y + lengthdir_y(1, new_dir);
 //comprobar si hay colision
 var obj_collision = instance_place(target_x, target_y, obj_hostil);
 var obj_collision_01 = instance_place(target_x, target_y, obj_lanzador);
+
 if(obj_collision != noone){
 
 	if(collision_line(x, y, obj_collision.x, obj_collision.y, obj_hostil, true, false)){
